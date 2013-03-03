@@ -130,6 +130,10 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329
 PRODUCT_COPY_FILES += \
     device/htc/ace/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd
 
+# Ubuntu Touch hack for bcmdhd
+PRODUCT_COPY_FILES += \
+    device/htc/ace/prebuilt/21bcmdhd:system/etc/init.d/21bcmdhd
+
 # Filesystem management tools
 PRODUCT_PACKAGES += \
    make_ext4fs \
