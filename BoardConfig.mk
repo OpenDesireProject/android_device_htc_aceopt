@@ -39,7 +39,6 @@ BOARD_KERNEL_BASE := 0x4000000
 BOARD_KERNEL_PAGE_SIZE := 4096
 
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := spade
-BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
 
 # cat /proc/emmc
 #dev:        size     erasesize name
@@ -63,20 +62,12 @@ TARGET_KERNEL_CONFIG := spade_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
 #TARGET_PREBUILT_KERNEL := device/htc/ace/prebuilt/kernel/kernel
 
-BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
-BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
-BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
-BOARD_USES_MMCUTILS := true
-BOARD_HAS_NO_MISC_PARTITION := true
 
+# Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
-TARGET_BOOTANIMATION_USE_RGB565 := true
-
-BOARD_USES_QCOM_LEGACY_CAM_PARAMS := true
+BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/ace/bluetooth
