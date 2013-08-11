@@ -187,4 +187,17 @@
          If false, Content-disposition fragments are ignored -->
     <bool name="config_mms_content_disposition_support">false</bool>
 
+    <!-- Vibrator pattern for feedback about touching a virtual key -->
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>0</item>
+        <item>1</item>
+        <item>20</item>
+        <item>21</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
+    <integer-array name="config_keyboardTapVibePattern">
+        <item>25</item>
+    </integer-array>
+
 </resources>
