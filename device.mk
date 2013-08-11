@@ -160,6 +160,9 @@ $(call inherit-product, vendor/htc/ace/ace-vendor.mk)
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
+# lower the increment
+ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.heapgrowthlimit=36m
+
 # Discard inherited values and use our own instead.
 PRODUCT_DEVICE := ace
 PRODUCT_NAME := ace
