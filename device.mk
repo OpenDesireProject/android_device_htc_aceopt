@@ -38,9 +38,6 @@ PRODUCT_COPY_FILES += device/htc/ace/configs/gps.conf:system/etc/gps.conf
 # HTC BT audio config
 PRODUCT_COPY_FILES += device/htc/ace/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
-# vold config
-PRODUCT_COPY_FILES += device/htc/ace/configs/vold.fstab:system/etc/vold.fstab
-
 # ACDB
 PRODUCT_COPY_FILES += \
 	device/htc/ace/configs/default.acdb:system/etc/firmware/default.acdb \

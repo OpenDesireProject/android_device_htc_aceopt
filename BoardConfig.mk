@@ -62,6 +62,8 @@ TARGET_KERNEL_CONFIG := spade_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
 #TARGET_PREBUILT_KERNEL := device/htc/ace/prebuilt/kernel/kernel
 
+TARGET_RECOVERY_FSTAB := device/htc/ace/ramdisk/fstab.spade
+
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Vold
