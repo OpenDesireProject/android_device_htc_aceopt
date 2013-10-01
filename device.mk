@@ -140,6 +140,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.zram.default=0
 
+# Quiet down GC prints
+PRODUCT_PROPERTY_OVERRIDES += \
+	dalvik.vm.debug.alloc=0
+
+# Temporarily use only /data/dalvik-cache
+PRODUCT_PROPERTY_OVERRIDES += \
+	dalvik.vm.dexopt-data-only=1
+
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
