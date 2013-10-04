@@ -1,7 +1,8 @@
 import init.htc7x30.usb.rc
 
-on early-init
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
+on init
+    mkdir /devlog 0700 root root
+
     mkdir /storage/primary 0555 root root
     mkdir /storage/primary/legacy 0555 root root
     export EXTERNAL_STORAGE /storage/primary/legacy
@@ -14,51 +15,26 @@ on early-init
 
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
 
-on early-fs
-   mkdir /devlog 0700 root root
-
 on fs
-   #mount all the things
-   mount_all fstab.spade
-
-on post-fs
-    chmod 0771 /cache
-    chown system cache /cache
-    chmod 0700 /devlog
-    chown root root /devlog
+   mount_all /fstab.spade
+   setprop ro.crypto.fuse_sdcard true
 
 on post-fs-data
+    # double check perms and set owner
+    chown root root /devlog
+    chmod 0700 /devlog
+
     # Prep for services
-    chmod 0771 /data
-    chown system system /data
-    mkdir /data/radio 0770 radio radio
-    mkdir /data/misc 1771 system misc
-    mkdir /data/misc/bluetoothd 0770 bluetooth bluetooth
-    mkdir /data/misc/keystore 0700 keystore keystore
-    mkdir /data/misc/vpn 0770 system vpn
-    chown system vpn /data/misc/vpn
-    mkdir /data/misc/vpn/profiles 0770 system vpn
-    chown system vpn /data/misc/vpn/profiles
+    mkdir /data/media 0770 media_rw media_rw
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
-    # Allow system to have access to /dev/tun directory
-    mkdir /dev/tun 0770 system vpn
-    chown system vpn /dev/tun
-    chmod 0770 /dev/tun
-
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
 
 on boot
-    # CyanogenMod SysFS entries
-    chown radio system /sys/module/gpio_event/parameters/phone_call_status
-    chmod 0664         /sys/module/gpio_event/parameters/phone_call_status
-    chown radio system /sys/camera_led_status/led_ril_status
-    chmod 0644         /sys/camera_led_status/led_ril_status
-
     # Power Management
     chmod 0664 /sys/module/pm/parameters/idle_sleep_mode
 
@@ -66,10 +42,18 @@ on boot
     # Enable it when boot is complete
     write /sys/module/pm2/parameters/idle_sleep_mode 3
 
-    # Disable IPv6 over mobile radio
-    #write /proc/sys/net/ipv6/conf/rmnet0/disable_ipv6 1
-    #write /proc/sys/net/ipv6/conf/rmnet1/disable_ipv6 1
-    #write /proc/sys/net/ipv6/conf/rmnet2/disable_ipv6 1
+    mount debugfs /sys/kernel/debug /sys/kernel/debug
+
+    mkdir /data/radio 0770 radio radio
+    chmod 2770 /data/radio
+
+    chown radio system /sys/module/gpio_event/parameters/phone_call_status
+    chmod 0664         /sys/module/gpio_event/parameters/phone_call_status
+    chown radio system /sys/camera_led_status/led_ril_status
+    chmod 0644         /sys/camera_led_status/led_ril_status
+
+    # 4.3 requires this
+    chmod 0644 /proc/cmdline
 
     # HTC SysFS for "Flip to Speaker"
     chown radio radio /sys/class/htc_accelerometer/accelerometer/PhoneOnOffFlag
@@ -90,6 +74,7 @@ on boot
     chmod 0660        /sys/class/power_supply/battery/charger_control
 
     # bluetooth power up/down interface
+    mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
     chown bluetooth bluetooth /dev/ttyHS0
     chmod 0660 /sys/class/rfkill/rfkill0/type
     chmod 0660 /sys/class/rfkill/rfkill0/state
@@ -126,6 +111,17 @@ on boot
     # Radio_feedback permissions
     chown radio radio /dev/radio_feedback
     chmod 0660 /dev/radio_feedback
+
+    # VPN
+    mkdir /data/misc/vpn 0770 system vpn
+    chown system vpn /data/misc/vpn
+    mkdir /data/misc/vpn/profiles 0770 system vpn
+    chown system vpn /data/misc/vpn/profiles
+
+    # Allow system to have access to /dev/tun directory
+    mkdir /dev/tun 0770 system vpn
+    chown system vpn /dev/tun
+    chmod 0770 /dev/tun
 
     # Advanced settings
     chown root system /sys/android_touch/sweep2wake
@@ -208,38 +204,13 @@ service iprenew_bnep0 /system/bin/dhcpcd -n
 
 # Compass and accelerometer daemon
 service akmd /system/bin/akmd
-    class late_start
+    class core
     user compass
     group compass misc input
-
-# Bugreport is triggered by the KEY_VOLUMEUP and BTN_MOUSE keycodes
-service bugreport /system/bin/bugmailer.sh -v
-    class late_start
-    disabled
-    oneshot
-    keycodes 114 115 116
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/mmcblk0p14
     class core
     user root
-
-service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7
-    class main
-    user root
-    disabled
-    oneshot
-
-service htc_ebdlogd_rel /system/bin/htc_ebdlogd -s -k
-    class main
-    user root
-    disabled
-    oneshot
-
-on property:ro.build.tags=test-keys
-    start htc_ebdlogd
-
-on property:ro.build.tags=release-keys
-    start htc_ebdlogd_rel
 
 on property:service.adb.root=1
     write /sys/class/android_usb/android0/enable 0
