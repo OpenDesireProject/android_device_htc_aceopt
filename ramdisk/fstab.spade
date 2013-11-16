@@ -13,4 +13,4 @@
 /dev/block/platform/msm_sdcc.2/by-num/p27     /cache       ext4    noatime,nosuid,nodev,barrier=0                          wait
 /dev/block/platform/msm_sdcc.2/by-num/p28     /devlog      ext4    noatime,nosuid,nodev,barrier=0                          wait
 
-/devices/platform/msm_sdcc.4/mmc_host/mmc2    /storage/primary/legacy  auto  defaults  voldmanaged=sdcard:auto
+/devices/platform/msm_sdcc.4/mmc_host/mmc2    auto  auto  defaults  voldmanaged=sdcard0:1,noemulatedsd
