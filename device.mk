@@ -148,6 +148,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.dexopt-data-only=1
 
+# Low RAM device
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.config.low_ram=true
+
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
