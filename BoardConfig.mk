@@ -33,7 +33,7 @@
 
 TARGET_BOOTLOADER_BOARD_NAME := spade
 
-BOARD_KERNEL_CMDLINE := no_console_suspend=1
+BOARD_KERNEL_CMDLINE := no_console_suspend=1 androidboot.selinux=permissive
 BOARD_KERNEL_RECOVERY_CMDLINE := $(BOARD_KERNEL_CMDLINE) msmsdcc_power_gpio=88
 BOARD_KERNEL_BASE := 0x4000000
 BOARD_KERNEL_PAGE_SIZE := 4096
@@ -65,7 +65,7 @@ TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
 TARGET_ARCH_LOWMEM := true
 
 TARGET_RECOVERY_FSTAB := device/htc/ace/ramdisk/fstab.spade
-
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Vold
