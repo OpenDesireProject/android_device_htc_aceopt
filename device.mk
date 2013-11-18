@@ -144,10 +144,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.debug.alloc=0
 
-# Temporarily use only /data/dalvik-cache
-PRODUCT_PROPERTY_OVERRIDES += \
-	dalvik.vm.dexopt-data-only=1
-
 # Low RAM device
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.low_ram=true
