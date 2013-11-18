@@ -162,7 +162,7 @@ PRODUCT_LOCALES += en_US
 # Goo.im support
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.goo.developerid=Mustaavalkosta \
-	ro.goo.rom=MustaCMTenPointOne \
+	ro.goo.rom=MustaKitkatNightly \
 	ro.goo.version=$(shell date -u +%Y%m%d)
 
 # call the proprietary setup
