@@ -55,7 +55,7 @@ postprocess.iso_midband=400
 postprocess.denoise_level=5
 
 # USB Mounting
-persist.sys.usb.config=mass_storage,adb
+persist.sys.usb.config=mtp
 
 # Disable kernel error checking
 ro.kernel.android.checkjni=0
