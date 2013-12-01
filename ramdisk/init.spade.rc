@@ -119,6 +119,8 @@ on boot
     chmod 0664 /sys/android_touch/dt2w_min_duration
     chown root system /sys/kernel/fast_charge/force_fast_charge
     chmod 0664 /sys/kernel/fast_charge/force_fast_charge
+    chown root system /sys/class/timed_output/vibrator/voltage_level
+    chmod 0664 /sys/class/timed_output/vibrator/voltage_level
 
     # Use a reasonable min free value for low memory killer
     write /proc/sys/vm/min_free_kbytes 8192
