@@ -214,11 +214,20 @@ service setup_fs /system/bin/setup_fs mmcblk0p26 mmcblk0p27
     group root
     oneshot
 
-#on property:ro.logcat.on.boot=1
-#    start logcat
+service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7
+    class main
+    user root
+    disabled
+    oneshot
 
-#service logcat /system/bin/logcat -f /data/media/logcat
-#    class main
-#    user root
-#    disabled
-#    oneshot
+service htc_ebdlogd_rel /system/bin/htc_ebdlogd -s -k
+    class main
+    user root
+    disabled
+    oneshot
+
+on property:ro.build.tags=test-keys
+    start htc_ebdlogd
+
+on property:ro.build.tags=release-keys
+    start htc_ebdlogd_rel
