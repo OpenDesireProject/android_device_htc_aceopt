@@ -6,8 +6,6 @@ ro.sf.lcd_density=240
 #disable system restrictions for all builds
 persist.sys.strictmode.visual=0
 
-com.qc.hardware=true
-
 # Modify MMS APN retry timer from 5s to 2s.
 ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
 
@@ -35,30 +33,13 @@ ro.ril.hsxpa=2
 # 0 => WCDMA preferred.
 ro.telephony.default_network=0
 
+# Wifi
 wifi.interface=wlan0
-wifi.supplicant_scan_interval=30
 
 mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
-
-# The OpenGL ES API level that is natively supported by this device.
-# This is a 16.16 fixed point number
-ro.opengles.version=131072
 
 # For the default value of agps
 ro.ril.def.agps.mode=2
 
 # For HSDPA low throughput
 ro.ril.disable.power.collapse=1
-
-# Properties of Scalado Denoise param.
-postprocess.iso_midband=400
-postprocess.denoise_level=5
-
-# USB Mounting
-persist.sys.usb.config=mass_storage,adb
-
-# Disable kernel error checking
-ro.kernel.android.checkjni=0
-
-# Disable Sending Usage Data
-ro.config.nocheckin=yes
