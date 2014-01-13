@@ -112,7 +112,9 @@ PRODUCT_COPY_FILES += \
 
 # GPS / BT / Lights / Sensors
 PRODUCT_PACKAGES += \
-	libbt-vendor
+	libbt-vendor \
+	lights.spade \
+	sensors.spade
 
 # Permissions
 PRODUCT_COPY_FILES += \
