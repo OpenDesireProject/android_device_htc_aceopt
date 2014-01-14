@@ -114,7 +114,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	libbt-vendor \
 	lights.spade \
-	sensors.spade
+	sensors.spade \
+	librpc
 
 # Permissions
 PRODUCT_COPY_FILES += \
