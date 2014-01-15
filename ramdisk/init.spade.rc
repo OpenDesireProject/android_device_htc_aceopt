@@ -32,6 +32,10 @@ on post-fs-data
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
 
+on early-boot
+    # set RLIMIT_MEMLOCK to 64MB
+    setrlimit 8 67108864 67108864
+
 on boot
     chmod 0664 /sys/module/pm/parameters/idle_sleep_mode
 
@@ -154,6 +158,16 @@ on boot
     setprop net.tcp.buffersize.umts 6144,87380,393216,6144,32768,283008
     setprop net.tcp.buffersize.edge 4096,32768,220416,4096,32768,110208
     setprop net.tcp.buffersize.gprs 4096,16384,32768,4096,11680,16384
+
+    # To prevent out of order acknowledgements from making
+    # connection tracking to treat them as not belonging to
+    # the connection they belong to.
+    # Otherwise, a weird issue happens in which some long
+    # connections on high-throughput links get dropped when
+    # an ack packet comes out of order
+    write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
+
+    chown root system /proc/net/ip_conntrack
 
 on property:sys.boot_completed=1
     write /sys/module/pm2/parameters/idle_sleep_mode 1
