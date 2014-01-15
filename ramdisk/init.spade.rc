@@ -15,7 +15,8 @@ on early-fs
     mkdir /devlog 0700 root root
 
 on fs
-   mount_all /fstab.spade
+    mount_all /fstab.spade
+    swapon_all /fstab.spade
 
 on post-fs
     chmod 0771 /cache
