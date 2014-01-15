@@ -14,3 +14,6 @@
 /dev/block/platform/msm_sdcc.2/by-num/p28     /devlog      ext4    noatime,nosuid,nodev,barrier=0                          wait
 
 /devices/platform/msm_sdcc.4/mmc_host/mmc2    auto  vfat  defaults  voldmanaged=sdcard0:auto,noemulatedsd
+
+# zram
+/dev/block/zram0                              none  swap  defaults  zramsize=67108864
