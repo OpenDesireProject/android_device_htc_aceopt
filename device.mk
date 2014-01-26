@@ -38,10 +38,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/rootdir/system/etc/gps.conf:system/etc/gps.conf
 
-# HTC BT audio config
-PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/rootdir/system/etc/AudioBTID.csv:system/etc/AudioBTID.csv
-
 # ACDB
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/rootdir/system/etc/firmware/default.acdb:system/etc/firmware/default.acdb \
