@@ -88,9 +88,7 @@ PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/keylayout/keychars/atmel-touchscreen.kcm:system/usr/keychars/atmel-touchscreen.kcm \
 	$(COMMON_PATH)/keylayout/keychars/synaptics-rmi-touchscreen.kcm:system/usr/keychars/synaptics-rmi-touchscreen.kcm \
 	$(COMMON_PATH)/keylayout/keychars/elan-touchscreen.kcm:system/usr/keychars/elan-touchscreen.kcm \
-	$(COMMON_PATH)/keylayout/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
 	$(COMMON_PATH)/keylayout/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-	$(COMMON_PATH)/keylayout/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
 	$(COMMON_PATH)/keylayout/keylayout/spade-keypad.kl:system/usr/keylayout/spade-keypad.kl \
 	$(COMMON_PATH)/keylayout/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
 	$(COMMON_PATH)/keylayout/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl \
