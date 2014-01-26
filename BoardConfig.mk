@@ -74,7 +74,7 @@ BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/ace/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/htc/ace/configs/libbt_vndcfg.txt
+BOARD_BLUEDROID_VENDOR_CONF := device/htc/ace/bluetooth/libbt_vndcfg.txt
 
 # No SDK blobs
 BUILD_EMULATOR_SENSORS_MODULE := false

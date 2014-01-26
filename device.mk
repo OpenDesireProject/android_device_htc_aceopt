@@ -36,52 +36,52 @@ PRODUCT_COPY_FILES += \
 
 # GPS config
 PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/configs/gps.conf:system/etc/gps.conf
+	$(COMMON_PATH)/rootdir/system/etc/gps.conf:system/etc/gps.conf
 
 # HTC BT audio config
 PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/configs/AudioBTID.csv:system/etc/AudioBTID.csv
+	$(COMMON_PATH)/rootdir/system/etc/AudioBTID.csv:system/etc/AudioBTID.csv
 
 # ACDB
 PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/configs/default.acdb:system/etc/firmware/default.acdb \
-	$(COMMON_PATH)/configs/default_org.acdb:system/etc/firmware/default_org.acdb
+	$(COMMON_PATH)/rootdir/system/etc/firmware/default.acdb:system/etc/firmware/default.acdb \
+	$(COMMON_PATH)/rootdir/system/etc/firmware/default_org.acdb:system/etc/firmware/default_org.acdb
 
 # Audio DSP Profiles
 PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/dsp/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
-	$(COMMON_PATH)/dsp/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
-	$(COMMON_PATH)/dsp/AIC3254_REG_XD.csv:system/etc/AIC3254_REG_XD.csv \
-	$(COMMON_PATH)/dsp/CodecDSPID.txt:system/etc/CodecDSPID.txt \
-	$(COMMON_PATH)/dsp/HP_Audio.csv:system/etc/HP_Audio.csv \
-	$(COMMON_PATH)/dsp/HP_Video.csv:system/etc/HP_Video.csv \
-	$(COMMON_PATH)/dsp/SPK_Combination.csv:system/etc/SPK_Combination.csv \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Bass_Booster.txt:system/etc/soundimage/Sound_Bass_Booster.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Blues.txt:system/etc/soundimage/Sound_Blues.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Classical.txt:system/etc/soundimage/Sound_Classical.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Country.txt:system/etc/soundimage/Sound_Country.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Dolby_A_HP.txt:system/etc/soundimage/Sound_Dolby_A_HP.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Dolby_A_SPK.txt:system/etc/soundimage/Sound_Dolby_A_SPK.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Dolby_V_HP.txt:system/etc/soundimage/Sound_Dolby_V_HP.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Dolby_V_SPK.txt:system/etc/soundimage/Sound_Dolby_V_SPK.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Dualmic.txt:system/etc/soundimage/Sound_Dualmic.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Dualmic_EP.txt:system/etc/soundimage/Sound_Dualmic_EP.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Dualmic_SPK.txt:system/etc/soundimage/Sound_Dualmic_SPK.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Jazz.txt:system/etc/soundimage/Sound_Jazz.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Latin.txt:system/etc/soundimage/Sound_Latin.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_New_Age.txt:system/etc/soundimage/Sound_New_Age.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Original.txt:system/etc/soundimage/Sound_Original.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Original_SPK.txt:system/etc/soundimage/Sound_Original_SPK.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Piano.txt:system/etc/soundimage/Sound_Piano.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Pop.txt:system/etc/soundimage/Sound_Pop.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_R_B.txt:system/etc/soundimage/Sound_R_B.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Rock.txt:system/etc/soundimage/Sound_Rock.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_SRS_A_HP.txt:system/etc/soundimage/Sound_SRS_A_HP.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_SRS_A_SPK.txt:system/etc/soundimage/Sound_SRS_A_SPK.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_SRS_V_HP.txt:system/etc/soundimage/Sound_SRS_V_HP.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_SRS_V_SPK.txt:system/etc/soundimage/Sound_SRS_V_SPK.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Treble_Booster.txt:system/etc/soundimage/Sound_Treble_Booster.txt \
-	$(COMMON_PATH)/dsp/soundimage/Sound_Vocal_Booster.txt:system/etc/soundimage/Sound_Vocal_Booster.txt
+	$(COMMON_PATH)/rootdir/system/etc/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
+	$(COMMON_PATH)/rootdir/system/etc/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
+	$(COMMON_PATH)/rootdir/system/etc/AIC3254_REG_XD.csv:system/etc/AIC3254_REG_XD.csv \
+	$(COMMON_PATH)/rootdir/system/etc/CodecDSPID.txt:system/etc/CodecDSPID.txt \
+	$(COMMON_PATH)/rootdir/system/etc/HP_Audio.csv:system/etc/HP_Audio.csv \
+	$(COMMON_PATH)/rootdir/system/etc/HP_Video.csv:system/etc/HP_Video.csv \
+	$(COMMON_PATH)/rootdir/system/etc/SPK_Combination.csv:system/etc/SPK_Combination.csv \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Bass_Booster.txt:system/etc/soundimage/Sound_Bass_Booster.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Blues.txt:system/etc/soundimage/Sound_Blues.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Classical.txt:system/etc/soundimage/Sound_Classical.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Country.txt:system/etc/soundimage/Sound_Country.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Dolby_A_HP.txt:system/etc/soundimage/Sound_Dolby_A_HP.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Dolby_A_SPK.txt:system/etc/soundimage/Sound_Dolby_A_SPK.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Dolby_V_HP.txt:system/etc/soundimage/Sound_Dolby_V_HP.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Dolby_V_SPK.txt:system/etc/soundimage/Sound_Dolby_V_SPK.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Dualmic.txt:system/etc/soundimage/Sound_Dualmic.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Dualmic_EP.txt:system/etc/soundimage/Sound_Dualmic_EP.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Dualmic_SPK.txt:system/etc/soundimage/Sound_Dualmic_SPK.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Jazz.txt:system/etc/soundimage/Sound_Jazz.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Latin.txt:system/etc/soundimage/Sound_Latin.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_New_Age.txt:system/etc/soundimage/Sound_New_Age.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Original.txt:system/etc/soundimage/Sound_Original.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Original_SPK.txt:system/etc/soundimage/Sound_Original_SPK.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Piano.txt:system/etc/soundimage/Sound_Piano.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Pop.txt:system/etc/soundimage/Sound_Pop.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_R_B.txt:system/etc/soundimage/Sound_R_B.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Rock.txt:system/etc/soundimage/Sound_Rock.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_SRS_A_HP.txt:system/etc/soundimage/Sound_SRS_A_HP.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_SRS_A_SPK.txt:system/etc/soundimage/Sound_SRS_A_SPK.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_SRS_V_HP.txt:system/etc/soundimage/Sound_SRS_V_HP.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_SRS_V_SPK.txt:system/etc/soundimage/Sound_SRS_V_SPK.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Treble_Booster.txt:system/etc/soundimage/Sound_Treble_Booster.txt \
+	$(COMMON_PATH)/rootdir/system/etc/soundimage/Sound_Vocal_Booster.txt:system/etc/soundimage/Sound_Vocal_Booster.txt
 
 # Keylayouts and keychars
 PRODUCT_COPY_FILES += \
@@ -106,7 +106,7 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329
 
 # BCM4329 firmware
 PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd
+	$(COMMON_PATH)/rootdir/system/vendor/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd
 
 # GPS / BT / Lights / Sensors
 PRODUCT_PACKAGES += \
