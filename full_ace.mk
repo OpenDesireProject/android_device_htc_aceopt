@@ -138,21 +138,6 @@ PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_LOCALES += en_US
 
-# Odexed extra version and goo.im rom
-ifeq ($(TARGET_WITH_DEXPREOPT),true)
-TARGET_UNOFFICIAL_BUILD_ID := ODEXED
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.goo.rom=MustaKitkatNightlyOdexed
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.goo.rom=MustaKitkatNightly
-endif
-
-# The rest of goo.im props
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.goo.developerid=Mustaavalkosta \
-	ro.goo.version=$(shell date -u +%Y%m%d)
-
 # call the proprietary setup
 $(call inherit-product, vendor/htc/ace/ace-vendor.mk)
 
@@ -161,10 +146,3 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 # lower the increment
 ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.heapgrowthlimit=36m
-
-# Discard inherited values and use our own instead.
-PRODUCT_DEVICE := ace
-PRODUCT_NAME := ace
-PRODUCT_BRAND := htc_wwe
-PRODUCT_MODEL := Desire HD
-PRODUCT_MANUFACTURER := HTC
