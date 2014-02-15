@@ -136,9 +136,6 @@ on boot
     chown root system /sys/class/timed_output/vibrator/voltage_level
     chmod 0664 /sys/class/timed_output/vibrator/voltage_level
 
-    # Use a reasonable min free value for low memory killer
-    write /proc/sys/vm/min_free_kbytes 8192
-
     # Network tweaks
     #write /proc/sys/net/ipv4/tcp_fin_timeout 30
     #write /proc/sys/net/ipv4/tcp_keepalive_intvl 30
