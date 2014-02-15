@@ -120,6 +120,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.setupwizard.enable_bypass=1 \
 	ro.com.google.gmsversion=2.3_r3
 
+# Low mem
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.config.low_ram=true
+
 # Override /proc/sys/vm/dirty_ratio on UMS
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vold.umsdirtyratio=50
