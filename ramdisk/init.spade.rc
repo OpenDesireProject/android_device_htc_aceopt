@@ -11,6 +11,8 @@ on init
     symlink /storage/sdcard0 /sdcard
     symlink /storage/sdcard0 /mnt/sdcard
 
+    chmod 666 /proc/cmdline
+
 on early-fs
     mkdir /devlog 0700 root root
 
