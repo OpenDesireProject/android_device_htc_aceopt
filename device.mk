@@ -140,10 +140,10 @@ PRODUCT_LOCALES += en_US
 ifeq ($(TARGET_WITH_DEXPREOPT),true)
 TARGET_UNOFFICIAL_BUILD_ID := ODEXED
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.goo.rom=MustaKitkatNightlyOdexed
+	ro.goo.rom=MustaKitkatReleaseOdexed
 else
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.goo.rom=MustaKitkatNightly
+	ro.goo.rom=MustaKitkatRelease
 endif
 
 # The rest of goo.im props
