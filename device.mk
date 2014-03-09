@@ -138,7 +138,11 @@ PRODUCT_LOCALES += en_US
 
 # Odexed extra version and goo.im rom
 ifeq ($(TARGET_WITH_DEXPREOPT),true)
+ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
+TARGET_UNOFFICIAL_BUILD_ID := ODEXED-$(TARGET_UNOFFICIAL_BUILD_ID)
+else
 TARGET_UNOFFICIAL_BUILD_ID := ODEXED
+endif
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.goo.rom=MustaKitkatNightlyOdexed
 else
