@@ -18,7 +18,7 @@ on early-fs
 
 on fs
     mount_all /fstab.spade
-    swapon_all /fstab.spade
+#    swapon_all /fstab.spade
 
 on post-fs
     chmod 0771 /cache
