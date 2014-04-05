@@ -55,7 +55,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1232072704
 BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
 BOARD_FLASH_BLOCK_SIZE := 262144
 
-TARGET_KERNEL_SOURCE := kernel/htc/htc7x30-3.0
+TARGET_KERNEL_SOURCE := kernel/htc/msm7x30
 TARGET_KERNEL_CONFIG := spade_defconfig
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
 #TARGET_PREBUILT_KERNEL := device/htc/ace/prebuilt/kernel/kernel
@@ -66,6 +66,9 @@ TARGET_RECOVERY_FSTAB := device/htc/ace/ramdisk/fstab.spade
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 BOARD_HAS_NO_SELECT_BUTTON := true
 SKIP_SET_METADATA := true
+
+# Brightness
+BRIGHTNESS_SYS_FILE := /sys/devices/platform/leds-pm8058/leds/keyboard-backlight/brightness
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
