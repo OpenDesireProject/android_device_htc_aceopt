@@ -10,6 +10,8 @@ on init
     # Support legacy paths
     symlink /storage/sdcard0 /sdcard
     symlink /storage/sdcard0 /mnt/sdcard
+    mkdir /storage/primary 0555 root root
+    symlink /storage/sdcard0 /storage/primary/legacy
 
     chmod 666 /proc/cmdline
 
