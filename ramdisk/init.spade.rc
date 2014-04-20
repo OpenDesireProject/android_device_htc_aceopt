@@ -139,6 +139,7 @@ on boot
     chmod 0664 /sys/kernel/fast_charge/force_fast_charge
     chown root system /sys/class/timed_output/vibrator/voltage_level
     chmod 0664 /sys/class/timed_output/vibrator/voltage_level
+    chown system system /sys/class/leds/flashlight/soft_flash
 
     # Network tweaks
     #write /proc/sys/net/ipv4/tcp_fin_timeout 30
