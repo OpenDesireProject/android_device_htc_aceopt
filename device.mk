@@ -129,7 +129,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Override /proc/sys/vm/dirty_ratio on UMS
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.vold.umsdirtyratio=50
+	ro.vold.umsdirtyratio=20
 
 # Use cache partition for system app dexopt
 PRODUCT_PROPERTY_OVERRIDES += \
