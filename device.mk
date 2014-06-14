@@ -140,10 +140,10 @@ else
 TARGET_UNOFFICIAL_BUILD_ID := ODEXED
 endif
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.goo.rom=MustaKitkatReleaseOdexed
+	ro.goo.rom=MustaKitkatReleasePlusOdexed
 else
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.goo.rom=MustaKitkatRelease
+	ro.goo.rom=MustaKitkatReleasePlus
 endif
 
 # The rest of goo.im props
