@@ -30,6 +30,13 @@ COMMON_PATH := device/htc/ace
 
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
+	$(COMMON_PATH)/recovery/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
+	$(COMMON_PATH)/recovery/sbin/choice_fn:recovery/root/sbin/choice_fn \
+	$(COMMON_PATH)/recovery/sbin/detect_key:recovery/root/sbin/detect_key \
+	$(COMMON_PATH)/recovery/sbin/htcbatt:recovery/root/sbin/htcbatt \
+	$(COMMON_PATH)/recovery/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
+	$(COMMON_PATH)/recovery/sbin/power_test:recovery/root/sbin/power_test \
+	$(COMMON_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab \
 	$(COMMON_PATH)/ramdisk/fstab.spade:root/fstab.spade \
 	$(COMMON_PATH)/ramdisk/init.spade.rc:root/init.spade.rc \
 	$(COMMON_PATH)/ramdisk/ueventd.spade.rc:root/ueventd.spade.rc
@@ -122,7 +129,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Override /proc/sys/vm/dirty_ratio on UMS
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.vold.umsdirtyratio=50
+	ro.vold.umsdirtyratio=20
+
+# Use cache partition for system app dexopt
+PRODUCT_PROPERTY_OVERRIDES += \
+	dalvik.vm.dexopt-data-only=0
+
+# Use KSM by default
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.ksm.default=1
 
 # Set build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
