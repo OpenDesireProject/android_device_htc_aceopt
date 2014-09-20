@@ -60,8 +60,6 @@ TARGET_KERNEL_CONFIG := spade_defconfig
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
 #TARGET_PREBUILT_KERNEL := device/htc/ace/prebuilt/kernel/kernel
 
-TARGET_ARCH_LOWMEM := true
-
 TARGET_NO_SEPARATE_RECOVERY := true
 TARGET_RECOVERY_FSTAB := device/htc/ace/ramdisk/fstab.spade
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
