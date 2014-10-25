@@ -21,8 +21,8 @@ $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 $(call inherit-product, device/htc/ace/media_a1026.mk)
 $(call inherit-product, device/htc/ace/media_htcaudio.mk)
 
-# Inherit qcom proprietary blobs
-$(call inherit-product, vendor/qcom/proprietary/qcom-vendor.mk)
+# call the proprietary setup
+$(call inherit-product, vendor/htc/ace/ace-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/ace/overlay
 
@@ -165,9 +165,6 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.goo.developerid=Mustaavalkosta \
 	ro.goo.version=$(shell date -u +%Y%m%d)
-
-# call the proprietary setup
-$(call inherit-product, vendor/htc/ace/ace-vendor.mk)
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
