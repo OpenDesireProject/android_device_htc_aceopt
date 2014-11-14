@@ -1,0 +1,35 @@
+on boot
+    start choice_fn
+    start htcbatt
+
+service choice_fn /sbin/choice_fn
+    disabled
+    oneshot
+
+service power_test /sbin/power_test
+    disabled
+    oneshot
+
+service offmode_charging /sbin/offmode_charging
+    disabled
+    oneshot
+
+service detect_key /sbin/detect_key
+    disabled
+    oneshot
+
+service htcbatt /sbin/htcbatt
+    disabled
+    oneshot
+
+# Always start adbd on userdebug and eng builds
+on property:ro.debuggable=1
+    #write /sys/class/android_usb/android0/enable 1
+    #start adbd
+    setprop service.adb.root 1
+
+# Restart adbd so it can run as root
+on property:service.adb.root=1
+    write /sys/class/android_usb/android0/enable 0
+    restart adbd
+    write /sys/class/android_usb/android0/enable 1

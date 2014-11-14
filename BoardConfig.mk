@@ -90,6 +90,8 @@ TW_INTERNAL_STORAGE_PATH := "/sdcard"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TW_INCLUDE_JB_CRYPTO := true
 TW_NO_SCREEN_BLANK := true
-TARGET_RECOVERY_INITRC := device/htc/ace/recovery/init.recovery.qcom.rc
 TW_INCLUDE_DUMLOCK := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
+#RECOVERY_VARIANT := twrp
+TW_NO_CPU_TEMP := true
+
