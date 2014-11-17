@@ -64,6 +64,7 @@ TARGET_NO_SEPARATE_RECOVERY := true
 TARGET_RECOVERY_FSTAB := device/htc/ace/ramdisk/fstab.spade
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_RECOVERY_SWIPE := true
 
 # Brightness
 BRIGHTNESS_SYS_FILE := /sys/devices/platform/leds-pm8058/leds/keyboard-backlight/brightness
