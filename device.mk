@@ -104,12 +104,11 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/rootdir/system/vendor/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd
 
-# GPS / BT / Lights / Sensors
+# BT / Lights / Sensors
 PRODUCT_PACKAGES += \
 	libbt-vendor \
 	lights.spade \
-	sensors.spade \
-	librpc
+	sensors.spade
 
 # Proximity Recalibrator
 PRODUCT_PACKAGES += \
