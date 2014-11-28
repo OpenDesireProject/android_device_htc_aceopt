@@ -99,7 +99,7 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_EXCLUDE_MTP := true
 TW_NO_CPU_TEMP := true
 
-ifneq ($(NO_DEXPREOPT),true)
+ifeq ($(USE_DEXPREOPT),true)
     # Enable dex-preoptimization to speed up first boot sequence
     ifeq ($(HOST_OS),linux)
         ifeq ($(WITH_DEXPREOPT),)
