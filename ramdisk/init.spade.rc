@@ -8,6 +8,10 @@ on init
     mkdir /storage/sdcard0 0700 root root
     export EXTERNAL_STORAGE /storage/sdcard0
 
+    #sd-ext
+    mkdir /sd-ext 0700 root root
+    export SD_EXT_DIRECTORY /sd-ext
+
     # Support legacy paths
     symlink /storage/sdcard0 /sdcard
     symlink /storage/sdcard0 /mnt/sdcard
