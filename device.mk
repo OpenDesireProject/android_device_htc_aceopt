@@ -34,10 +34,6 @@ PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/ramdisk/init.spade.rc:root/init.spade.rc \
 	$(COMMON_PATH)/ramdisk/ueventd.spade.rc:root/ueventd.spade.rc
 
-# GPS config
-PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/rootdir/system/etc/gps.conf:system/etc/gps.conf
-
 # ACDB
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/rootdir/system/etc/firmware/default.acdb:system/etc/firmware/default.acdb \
