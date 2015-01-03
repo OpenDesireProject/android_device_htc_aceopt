@@ -107,8 +107,7 @@ PRODUCT_PACKAGES += \
 	sensors.spade
 
 # Proximity Recalibrator
-PRODUCT_PACKAGES += \
-	ProximityRecalibrator
+PRODUCT_PACKAGES += ProximityRecalibrator
 
 # Override /proc/sys/vm/dirty_ratio on UMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -130,8 +129,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 endif
 
 # ODPUpdater
-PRODUCT_PACKAGES += \
-	ODPUpdater
+PRODUCT_PACKAGES += ODPUpdater
 
 ifeq ($(TARGET_UNOFFICIAL_BUILD_ID),)
 PRODUCT_PROPERTY_OVERRIDES += ro.odp.releasetype=NIGHTLY
