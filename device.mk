@@ -30,9 +30,9 @@ COMMON_PATH := device/htc/ace
 
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/ramdisk/fstab.spade:root/fstab.spade \
-	$(COMMON_PATH)/ramdisk/init.spade.rc:root/init.spade.rc \
-	$(COMMON_PATH)/ramdisk/ueventd.spade.rc:root/ueventd.spade.rc
+	$(COMMON_PATH)/rootdir/fstab.spade:root/fstab.spade \
+	$(COMMON_PATH)/rootdir/init.spade.rc:root/init.spade.rc \
+	$(COMMON_PATH)/rootdir/ueventd.spade.rc:root/ueventd.spade.rc
 
 # GPS config
 PRODUCT_COPY_FILES += \
