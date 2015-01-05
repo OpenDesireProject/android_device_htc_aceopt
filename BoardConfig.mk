@@ -62,7 +62,7 @@ TARGET_KERNEL_CONFIG := spade_defconfig
 #TARGET_PREBUILT_KERNEL := device/htc/ace/prebuilt/kernel/kernel
 
 TARGET_NO_SEPARATE_RECOVERY := true
-TARGET_RECOVERY_FSTAB := device/htc/ace/ramdisk/fstab.spade
+TARGET_RECOVERY_FSTAB := device/htc/ace/rootdir/fstab.spade
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
