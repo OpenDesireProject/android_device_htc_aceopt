@@ -121,8 +121,7 @@ PRODUCT_COPY_FILES += \
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.setupwizard.enable_bypass=1 \
-	ro.com.google.gmsversion=2.3_r3
+	ro.setupwizard.enable_bypass=1
 
 # Override /proc/sys/vm/dirty_ratio on UMS
 PRODUCT_PROPERTY_OVERRIDES += \
