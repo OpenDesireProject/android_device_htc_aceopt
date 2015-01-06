@@ -10,7 +10,6 @@
 /dev/block/platform/msm_sdcc.2/by-num/p27     /cache       ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc,errors=panic wait,check
 
 /devices/platform/msm_sdcc.4/mmc_host/mmc2*   auto         vfat    defaults                                                voldmanaged=sdcard0:auto,noemulatedsd
-/dev/block/platform/msm_sdcc.4/by-num/p2      /sd-ext      ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc check
 
 # zram
 #/dev/block/zram0                              none  swap  defaults  zramsize=67108864
