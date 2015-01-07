@@ -154,19 +154,6 @@ on boot
     write /proc/sys/net/ipv4/tcp_window_scaling 1
     write /proc/sys/net/ipv4/tcp_mem "8192 87380 524288"
 
-    # The next two settings will be overwritten every time
-    # the network type switches (wifi <-> umts etc.)
-    # so we start with wifi values to ensure best
-    # performance after boot.
-    write /proc/sys/net/ipv4/tcp_rmem "8192 87380 524288"
-    write /proc/sys/net/ipv4/tcp_wmem "8192 87380 393216"
-
-    setprop net.tcp.buffersize.wifi 8192,87380,524288,8192,87380,524288
-    setprop net.tcp.buffersize.hsdpa 8192,87380,524288,8192,65536,393216
-    setprop net.tcp.buffersize.umts 6144,87380,393216,6144,32768,283008
-    setprop net.tcp.buffersize.edge 4096,32768,220416,4096,32768,110208
-    setprop net.tcp.buffersize.gprs 4096,16384,32768,4096,11680,16384
-
     # To prevent out of order acknowledgements from making
     # connection tracking to treat them as not belonging to
     # the connection they belong to.
