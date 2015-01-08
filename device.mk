@@ -137,9 +137,6 @@ else
 PRODUCT_PROPERTY_OVERRIDES += ro.odp.releasetype=SNAPSHOT
 endif
 
-# call dalvik heap config
-$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
-
 # lower the increment
 ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.heapgrowthlimit=36m
 
