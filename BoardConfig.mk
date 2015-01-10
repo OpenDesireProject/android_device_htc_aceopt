@@ -97,8 +97,8 @@ TW_NO_SCREEN_BLANK := true
 TW_INCLUDE_DUMLOCK := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 #RECOVERY_VARIANT := twrp
-TW_EXCLUDE_MTP := true
 TW_NO_CPU_TEMP := true
+TW_NO_USB_STORAGE := true
 
 ifeq ($(USE_DEXPREOPT),true)
     # Enable dex-preoptimization to speed up first boot sequence
