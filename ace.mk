@@ -11,8 +11,8 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# call the proprietary setup
+$(call inherit-product, vendor/htc/ace/ace-vendor.mk)
 
 # Inherit common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
@@ -20,9 +20,6 @@ $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 # HTC Audio
 $(call inherit-product, device/htc/ace/media_a1026.mk)
 $(call inherit-product, device/htc/ace/media_htcaudio.mk)
-
-# call the proprietary setup
-$(call inherit-product, vendor/htc/ace/ace-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/ace/overlay
 
@@ -113,13 +110,9 @@ PRODUCT_PACKAGES += ProximityRecalibrator
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vold.umsdirtyratio=20
 
-# Set build date
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
-PRODUCT_LOCALES += en_US
 
 ifeq ($(DISABLE_SECURITY),true)
 # Disable ADB authentication and use root shell
@@ -136,10 +129,3 @@ PRODUCT_PROPERTY_OVERRIDES += ro.odp.releasetype=NIGHTLY
 else
 PRODUCT_PROPERTY_OVERRIDES += ro.odp.releasetype=SNAPSHOT
 endif
-
-# Discard inherited values and use our own instead.
-PRODUCT_DEVICE := ace
-PRODUCT_NAME := ace
-PRODUCT_BRAND := htc_wwe
-PRODUCT_MODEL := Desire HD
-PRODUCT_MANUFACTURER := HTC
