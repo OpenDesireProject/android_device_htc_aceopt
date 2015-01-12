@@ -29,10 +29,6 @@ on post-fs
     chown system cache /cache
 
 on post-fs-data
-    mkdir /data/misc/wifi/sockets 0770 wifi wifi
-    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
-    mkdir /data/misc/dhcp 0770 dhcp dhcp
-
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
 
@@ -111,12 +107,6 @@ on boot
     write /sys/kernel/mm/ksm/deferred_timer 1
     write /sys/kernel/mm/ksm/run 1
 
-    # VPN
-    mkdir /data/misc/vpn 0770 system vpn
-    chown system vpn /data/misc/vpn
-    mkdir /data/misc/vpn/profiles 0770 system vpn
-    chown system vpn /data/misc/vpn/profiles
-
     # Allow system to have access to /dev/tun directory
     mkdir /dev/tun 0770 system vpn
     chown system vpn /dev/tun
@@ -189,7 +179,6 @@ on property:init.svc.wpa_supplicant=stopped
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
-    -O/data/misc/wifi/sockets \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
     class main
     socket wpa_wlan0 dgram 660 wifi wifi
