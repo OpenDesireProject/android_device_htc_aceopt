@@ -27,9 +27,7 @@ COMMON_PATH := device/htc/ace
 
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/rootdir/fstab.spade:root/fstab.spade \
-	$(COMMON_PATH)/rootdir/init.spade.rc:root/init.spade.rc \
-	$(COMMON_PATH)/rootdir/ueventd.spade.rc:root/ueventd.spade.rc
+	$(COMMON_PATH)/rootdir/init.target.rc:root/init.target.rc
 
 # ACDB
 PRODUCT_COPY_FILES += \
