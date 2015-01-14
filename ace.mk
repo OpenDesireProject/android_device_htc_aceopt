@@ -26,8 +26,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/ace/overlay
 COMMON_PATH := device/htc/ace
 
 # Boot ramdisk setup
-PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/rootdir/init.target.rc:root/init.target.rc
+PRODUCT_PACKAGES += init.target.rc
 
 # ACDB
 PRODUCT_COPY_FILES += \
