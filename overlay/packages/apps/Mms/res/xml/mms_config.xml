@@ -36,6 +36,6 @@
     <string name="uaProfUrl">http://www.htcmms.com.tw/Android/Common/DesireHD/ua-profile.xml</string>
 
     <!-- User-Agent parameter used in MMS http request -->
-    <string name="userAgent">Android-Mms/0.1</string>
+    <string name="userAgent">Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; HTC Desire HD Build/GRJ90) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</string>
 
 </mms_config>
