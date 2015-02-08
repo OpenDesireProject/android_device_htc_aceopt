@@ -101,6 +101,9 @@ PRODUCT_PACKAGES += \
 	lights.spade \
 	sensors.spade
 
+# GPS
+PRODUCT_PACKAGES += gps.msm7x30
+
 # Proximity Recalibrator
 PRODUCT_PACKAGES += ProximityRecalibrator
 
