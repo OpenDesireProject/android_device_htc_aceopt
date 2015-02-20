@@ -56,13 +56,9 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 
 TARGET_KERNEL_SOURCE := kernel/htc/msm7x30
 TARGET_KERNEL_CONFIG := ace_defconfig
-#TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
-#TARGET_PREBUILT_KERNEL := device/htc/ace/prebuilt/kernel/kernel
 
-TARGET_NO_SEPARATE_RECOVERY := true
 TARGET_RECOVERY_FSTAB := device/htc/msm7x30-common/rootdir/fstab.htc7x30
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Brightness
 BRIGHTNESS_SYS_FILE := /sys/devices/platform/leds-pm8058/leds/keyboard-backlight/brightness
@@ -76,10 +72,7 @@ BOARD_VOLD_MAX_PARTITIONS := 36
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/ace/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/htc/ace/bluetooth/libbt_vndcfg.txt
 
-# No SDK blobs
-BUILD_EMULATOR_SENSORS_MODULE := false
-BUILD_EMULATOR_GPS_MODULE := false
-
+# Spade DSP profile
 COMMON_GLOBAL_CFLAGS += -DWITH_SPADE_DSP_PROFILE
 
 # Charge mode
@@ -97,12 +90,3 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 #RECOVERY_VARIANT := twrp
 TW_NO_CPU_TEMP := true
 TW_NO_USB_STORAGE := true
-
-ifeq ($(USE_DEXPREOPT),true)
-    # Enable dex-preoptimization to speed up first boot sequence
-    ifeq ($(HOST_OS),linux)
-        ifeq ($(WITH_DEXPREOPT),)
-            WITH_DEXPREOPT := true
-        endif
-    endif
-endif
