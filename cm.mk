@@ -28,9 +28,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_NAME := cm_ace
 PRODUCT_GMS_CLIENTID_BASE := android-htc-rev
 
-# Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal hdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi
-
 # Release name
 PRODUCT_RELEASE_NAME := ace

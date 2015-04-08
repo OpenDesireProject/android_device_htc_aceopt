@@ -106,6 +106,9 @@ PRODUCT_PACKAGES += ProximityRecalibrator
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vold.umsdirtyratio=20
 
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_LOCALES += en_US
 
 ifeq ($(DISABLE_SECURITY),true)
