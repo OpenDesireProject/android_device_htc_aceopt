@@ -13,4 +13,4 @@
 /dev/block/platform/msm_sdcc.4/by-num/p2      /sd-ext      ext4	   noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc wait,check
 
 # zram
-/dev/block/zram0                              none  swap  defaults  zramsize=134217728
+/dev/block/zram0                              none  swap  defaults  zramsize=268435456
