@@ -21,6 +21,7 @@ $(call inherit-product, device/htc/ace/ace.mk)
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
+TARGET_BOOTANIMATION_HALF_RES := true
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_ace
