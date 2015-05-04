@@ -117,6 +117,3 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.adb.secure=0 \
 	ro.secure=0
 endif
-
-# ODPUpdater
-PRODUCT_PACKAGES += ODPUpdater
