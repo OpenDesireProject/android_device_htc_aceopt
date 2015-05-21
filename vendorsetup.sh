@@ -1,2 +1,2 @@
-add_lunch_combo cm_ace-userdebug
-add_lunch_combo cm_ace-eng
+add_lunch_combo eos_ace-userdebug
+add_lunch_combo eos_ace-eng
