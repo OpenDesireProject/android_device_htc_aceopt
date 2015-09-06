@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit device configuration
-$(call inherit-product, device/htc/ace/full_ace.mk)
+$(call inherit-product, device/htc/aceopt/full_ace.mk)
 
 # Inherit common CM configuration
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
@@ -25,10 +25,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 	PRIVATE_BUILD_DESC="htc_ace-$(TARGET_BUILD_VARIANT) $(PLATFORM_VERSION) $(BUILD_ID) $(shell date +%Y%m%d%H%M%S) test-keys"
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_ace
+PRODUCT_NAME := cm_aceopt
 PRODUCT_GMS_CLIENTID_BASE := android-htc-rev
 
 PRODUCT_BOOTANIMATION := device/htc/msm7x30-common/rootdir/system/media/bootanimation.zip
 
 # Release name
-PRODUCT_RELEASE_NAME := ace
+PRODUCT_RELEASE_NAME := aceopt

@@ -14,16 +14,18 @@
 # call the proprietary setup
 $(call inherit-product, vendor/htc/ace/ace-vendor.mk)
 
+# HACK: Set TARGET_DEVICE for common configuration if blocks
+TARGET_DEVICE := aceopt
 # Inherit common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 
 # HTC Audio
-$(call inherit-product, device/htc/ace/media_a1026.mk)
-$(call inherit-product, device/htc/ace/media_htcaudio.mk)
+$(call inherit-product, device/htc/aceopt/media_a1026.mk)
+$(call inherit-product, device/htc/aceopt/media_htcaudio.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/htc/ace/overlay
+DEVICE_PACKAGE_OVERLAYS += device/htc/aceopt/overlay
 
-COMMON_PATH := device/htc/ace
+COMMON_PATH := device/htc/aceopt
 
 # Boot ramdisk setup
 PRODUCT_PACKAGES += init.target.rc

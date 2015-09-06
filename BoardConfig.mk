@@ -49,15 +49,22 @@ BOARD_KERNEL_PAGE_SIZE := 4096
 #mmcblk0p28: 014bfe00 00000200 "devlog"
 #mmcblk0p29: 00040000 00000200 "pdata"
 
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 585101312
+# Use data partition size here because we are using
+# it as /system
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1232072704
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1232072704
 BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
 BOARD_FLASH_BLOCK_SIZE := 262144
 
+# Keep ro.product.device as ace to keep camera blobs happy.
+TARGET_VENDOR_DEVICE_NAME := ace
+# But use aceopt for updater-script assert check
+TARGET_OTA_ASSERT_DEVICE := aceopt
+
 TARGET_KERNEL_SOURCE := kernel/htc/msm7x30
 TARGET_KERNEL_CONFIG := ace_defconfig
 
-TARGET_RECOVERY_FSTAB := device/htc/msm7x30-common/rootdir/fstab.htc7x30
+TARGET_RECOVERY_FSTAB := device/htc/msm7x30-common/rootdir/fstab_variant.htc7x30
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 BOARD_HAS_NO_SELECT_BUTTON := true
 
@@ -70,8 +77,8 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storag
 BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/ace/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/htc/ace/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/aceopt/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/htc/aceopt/bluetooth/libbt_vndcfg.txt
 
 # Spade DSP profile
 COMMON_GLOBAL_CFLAGS += -DWITH_SPADE_DSP_PROFILE
