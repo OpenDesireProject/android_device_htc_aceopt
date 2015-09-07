@@ -64,7 +64,7 @@ TARGET_OTA_ASSERT_DEVICE := aceopt
 TARGET_KERNEL_SOURCE := kernel/htc/msm7x30
 TARGET_KERNEL_CONFIG := ace_defconfig
 
-TARGET_RECOVERY_FSTAB := device/htc/msm7x30-common/rootdir/fstab_variant.htc7x30
+TARGET_RECOVERY_FSTAB := device/htc/aceopt/rootdir/fstab.htc7x30
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 BOARD_HAS_NO_SELECT_BUTTON := true
 
