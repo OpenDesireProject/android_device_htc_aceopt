@@ -13,8 +13,6 @@ on init
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
 on fs
-    mount_all /fstab.htc7x30
-    swapon_all /fstab.htc7x30
     setprop ro.crypto.fuse_sdcard true
 
 on boot
