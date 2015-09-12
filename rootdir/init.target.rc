@@ -31,3 +31,7 @@ on boot
     chmod 0664 /sys/android_touch/dt2w_max_duration
     chown root system /sys/android_touch/dt2w_min_duration
     chmod 0664 /sys/android_touch/dt2w_min_duration
+
+# sdcard daemon
+service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
+    class late_start
