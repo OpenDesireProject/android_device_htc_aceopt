@@ -104,10 +104,6 @@ PRODUCT_PACKAGES += gps.msm7x30
 # Proximity Recalibrator
 PRODUCT_PACKAGES += ProximityRecalibrator
 
-# Override /proc/sys/vm/dirty_ratio on UMS
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.vold.umsdirtyratio=20
-
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := hdpi
