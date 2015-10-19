@@ -112,7 +112,7 @@ on boot
     # UKSM
     write /sys/kernel/mm/uksm/max_cpu_percentage 75
     write /sys/kernel/mm/uksm/sleep_millisecs 500
-    write /sys/kernel/mm/uksm/run 1
+    #write /sys/kernel/mm/uksm/run 1
 
     # VPN
     mkdir /data/misc/vpn 0770 system vpn
