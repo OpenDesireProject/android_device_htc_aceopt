@@ -105,11 +105,6 @@ on boot
     # Read only 1 page at a time
     write /proc/sys/vm/page-cluster 0
 
-    # UKSM
-    write /sys/kernel/mm/uksm/max_cpu_percentage 75
-    write /sys/kernel/mm/uksm/sleep_millisecs 500
-    #write /sys/kernel/mm/uksm/run 1
-
     # VPN
     mkdir /data/misc/vpn 0770 system vpn
     chown system vpn /data/misc/vpn
