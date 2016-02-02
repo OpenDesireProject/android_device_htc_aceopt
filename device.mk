@@ -18,15 +18,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 
 # HTC Audio
-$(call inherit-product, device/htc/ace/media_a1026.mk)
-$(call inherit-product, device/htc/ace/media_htcaudio.mk)
+$(call inherit-product, device/htc/aceopt/media_a1026.mk)
+$(call inherit-product, device/htc/aceopt/media_htcaudio.mk)
 
 # call the proprietary setup
 $(call inherit-product, vendor/htc/ace/ace-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/htc/ace/overlay
+DEVICE_PACKAGE_OVERLAYS += device/htc/aceopt/overlay
 
-COMMON_PATH := device/htc/ace
+COMMON_PATH := device/htc/aceopt
 
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
@@ -153,8 +153,8 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.heapgrowthlimit=36m
 
 # Discard inherited values and use our own instead.
-PRODUCT_DEVICE := ace
-PRODUCT_NAME := ace
+PRODUCT_DEVICE := aceopt
+PRODUCT_NAME := aceopt
 PRODUCT_BRAND := htc_wwe
 PRODUCT_MODEL := Desire HD
 PRODUCT_MANUFACTURER := HTC
