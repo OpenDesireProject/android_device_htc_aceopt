@@ -123,10 +123,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.setupwizard.enable_bypass=1
 
-# Override /proc/sys/vm/dirty_ratio on UMS
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.vold.umsdirtyratio=20
-
 # Set build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
