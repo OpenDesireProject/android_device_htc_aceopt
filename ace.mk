@@ -104,6 +104,11 @@ PRODUCT_PACKAGES += gps.msm7x30
 # Proximity Recalibrator
 PRODUCT_PACKAGES += ProximityRecalibrator
 
+# ART
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-filter=balanced \
+    dalvik.vm.image-dex2oat-filter=speed
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := hdpi
