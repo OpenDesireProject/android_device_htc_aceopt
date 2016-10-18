@@ -33,11 +33,6 @@
 
 TARGET_BOOTLOADER_BOARD_NAME := spade
 
-BOARD_KERNEL_CMDLINE := no_console_suspend=1 androidboot.selinux=permissive androidboot.hardware=htc7x30
-BOARD_KERNEL_RECOVERY_CMDLINE := $(BOARD_KERNEL_CMDLINE) msmsdcc_power_gpio=88
-BOARD_KERNEL_BASE := 0x4000000
-BOARD_KERNEL_PAGE_SIZE := 4096
-
 # cat /proc/emmc
 #dev:        size     erasesize name
 #mmcblk0p17: 00040000 00000200 "misc"
@@ -61,43 +56,19 @@ TARGET_VENDOR_DEVICE_NAME := ace
 # But use aceopt for updater-script assert check
 TARGET_OTA_ASSERT_DEVICE := aceopt
 
-TARGET_KERNEL_SOURCE := kernel/htc/msm7x30
+# Kernel
 TARGET_KERNEL_CONFIG := ace_defconfig
 
 # Recovery
 TARGET_RECOVERY_DEVICE_DIRS += device/htc/aceopt
-
 TARGET_RECOVERY_FSTAB := device/htc/aceopt/rootdir/fstab.htc7x30
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Brightness
 BRIGHTNESS_SYS_FILE := /sys/devices/platform/leds-pm8058/leds/keyboard-backlight/brightness
 
-# Vold
-BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
-BOARD_VOLD_MAX_PARTITIONS := 36
-
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/aceopt/bluetooth/include
 BOARD_BLUEDROID_VENDOR_CONF := device/htc/aceopt/bluetooth/vnd_ace.txt
-BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 
 # Spade DSP profile
 COMMON_GLOBAL_CFLAGS += -DWITH_SPADE_DSP_PROFILE
-
-# TWRP
-TW_THEME := portrait_mdpi
-RECOVERY_SDCARD_ON_DATA := true
-BOARD_HAS_NO_REAL_SDCARD := true
-TW_INTERNAL_STORAGE_PATH := "/data/media"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_INCLUDE_CRYPTO := true
-TW_NO_SCREEN_BLANK := true
-TW_INCLUDE_DUMLOCK := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-#RECOVERY_VARIANT := twrp
-TW_NO_USB_STORAGE := true
-TW_NO_CPU_TEMP := true
-BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
