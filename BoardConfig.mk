@@ -41,7 +41,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/aceopt/bluetooth/inclu
 BOARD_BLUEDROID_VENDOR_CONF := device/htc/aceopt/bluetooth/vnd_ace.txt
 
 # Spade DSP profile
-COMMON_GLOBAL_CFLAGS += -DWITH_SPADE_DSP_PROFILE
+BOARD_GLOBAL_CFLAGS += -DWITH_SPADE_DSP_PROFILE
 
 # Recovery
 TARGET_RECOVERY_DEVICE_DIRS += device/htc/aceopt
