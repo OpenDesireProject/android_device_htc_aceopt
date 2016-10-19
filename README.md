@@ -18,3 +18,16 @@
 
 ## Device Picture
 ![HTC Desire HD](http://cdn2.gsmarena.com/vv/pics/htc/htc-desire-hd-new-1.jpg "HTC Desire HD")
+
+## Original Partition Table
+# cat /proc/emmc
+dev:        size     erasesize name
+mmcblk0p17: 00040000 00000200 "misc"
+mmcblk0p21: 0087f400 00000200 "recovery"
+mmcblk0p22: 00400000 00000200 "boot"
+mmcblk0p25: 22dffe00 00000200 "system"
+mmcblk0p27: 12bffe00 00000200 "cache"
+mmcblk0p26: 496ffe00 00000200 "userdata"
+mmcblk0p28: 014bfe00 00000200 "devlog"
+mmcblk0p29: 00040000 00000200 "pdata"
+
