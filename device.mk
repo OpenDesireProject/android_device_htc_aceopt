@@ -86,6 +86,9 @@ PRODUCT_PACKAGES += \
 	lights.spade \
 	sensors.spade
 
+# Bluetooth
+PRODUCT_PACKAGES += bt_vendor.conf
+
 # GPS
 PRODUCT_PACKAGES += gps.msm7x30
 
