@@ -38,7 +38,7 @@ TARGET_KERNEL_CONFIG := ace_defconfig
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/aceopt/bluetooth/include
-BOARD_BLUEDROID_VENDOR_CONF := device/htc/aceopt/bluetooth/vnd_ace.txt
+BOARD_CUSTOM_BT_CONFIG := device/htc/aceopt/bluetooth/vnd_ace.txt
 
 # Spade DSP profile
 BOARD_GLOBAL_CFLAGS += -DWITH_SPADE_DSP_PROFILE
